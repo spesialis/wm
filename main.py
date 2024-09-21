@@ -5,7 +5,7 @@ from pyrogram import filters
 from env import API_ID, API_HASH, SESSION
 import asyncio
 
-bot = Client('wm', api_id=api_id, api_hash=api_hash, session_string=session)
+bot = Client('wm', api_id=API_ID, api_hash=API_HASH, session_string=SESSION)
 
 @bot.on_message(filters.photo)
 async def photo_handler(client: Client, message: Message):
