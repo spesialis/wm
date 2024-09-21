@@ -2,10 +2,10 @@ from wm import wm
 from pyrogram.client import Client
 from pyrogram.types import Message
 from pyrogram import filters
-from env import API_ID, API_HASH, SESSION
+from env import API_ID, API_HASH, TOKEN
 import asyncio
 
-bot = Client('wm', api_id=API_ID, api_hash=API_HASH, session_string=SESSION)
+bot = Client('wm', api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 @bot.on_message(filters.photo)
 async def photo_handler(client: Client, message: Message):
